@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 210" width="480" height="210">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Nunito';
+        src: url('https://fonts.gstatic.com/s/nunito/v26/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3j6zbXWjgeg.ttf') format('truetype');
+        font-weight: 800;
+      }
+      .soft-font {
+        font-family: 'Nunito', 'Quicksand', 'Segoe UI', 'Arial Rounded MT Bold', 'Helvetica Rounded', sans-serif;
+        font-weight: 800;
+      }
+    </style>
+    
+    <linearGradient id="petBlue" x1="0%" y1="0%" x2="10%" y2="100%">
+      <stop offset="0%" stop-color="#5BA3E0"/>
+      <stop offset="100%" stop-color="#3580C5"/>
+    </linearGradient>
+    
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="1.5" dy="2.5" stdDeviation="3" flood-color="#1E4A7A" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- ========== PET FACE "P" ========== -->
+  <g transform="translate(20, 20)" filter="url(#softShadow)">
+    
+    <!-- Outer P shape with hole (evenodd) -->
+    <path fill-rule="evenodd" d="
+      M 32 12
+      C 20 12 14 22 14 34
+      L 14 162
+      C 14 176 24 184 38 184
+      L 54 184
+      C 68 184 76 176 76 162
+      L 76 110
+      L 92 110
+      C 140 110 168 84 168 54
+      C 168 24 140 0 92 0
+      L 54 0
+      C 40 0 32 12 32 12
+      Z
+      
+      M 76 44
+      L 92 44
+      C 116 44 130 52 130 60
+      C 130 68 116 78 92 78
+      L 76 78
+      Z
+    " fill="url(#petBlue)" stroke="#2A6BB0" stroke-width="2.8" stroke-linejoin="round"/>
+
+    <!-- Left ear -->
+    <ellipse cx="52" cy="8" rx="18" ry="22" 
+             fill="url(#petBlue)" stroke="#2A6BB0" stroke-width="2.4"
+             transform="rotate(-18 52 8)"/>
+    <ellipse cx="52" cy="10" rx="8.5" ry="12" 
+             fill="#8EC8F5" opacity="0.75"
+             transform="rotate(-18 52 10)"/>
+
+    <!-- Right ear -->
+    <ellipse cx="116" cy="14" rx="17" ry="20" 
+             fill="url(#petBlue)" stroke="#2A6BB0" stroke-width="2.4"
+             transform="rotate(22 116 14)"/>
+    <ellipse cx="116" cy="16" rx="8" ry="11" 
+             fill="#8EC8F5" opacity="0.75"
+             transform="rotate(22 116 16)"/>
+
+    <!-- Big left eye -->
+    <ellipse cx="66" cy="58" rx="16" ry="18" fill="#152F4A"/>
+    <circle cx="59" cy="51" r="5.5" fill="white" opacity="0.95"/>
+    <circle cx="71" cy="61" r="2.5" fill="white" opacity="0.5"/>
+
+    <!-- Big right eye -->
+    <ellipse cx="110" cy="58" rx="16" ry="18" fill="#152F4A"/>
+    <circle cx="103" cy="51" r="5.5" fill="white" opacity="0.95"/>
+    <circle cx="115" cy="61" r="2.5" fill="white" opacity="0.5"/>
+
+    <!-- Soft smile -->
+    <path d="M 70 84 Q 88 100 106 84" 
+          fill="none" stroke="#152F4A" stroke-width="3.8" 
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- ========== Soft "et.co" ========== -->
+  <text class="soft-font" x="210" y="140" 
+        font-size="92" 
+        fill="#3A7BC8"
+        letter-spacing="-3">
+    et.co
+  </text>
+</svg>

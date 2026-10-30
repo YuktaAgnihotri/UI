@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#FFF0B8" />
+  <title>A Little Joy Goes a Long Way</title>
+  <meta name="description" content="Something lovely is waiting for you. Come on in!" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400..700&family=Nunito:wght@400..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Shared shapes (blob + sparkle) used by the decorations below -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <path id="blob-path" d="M62 -46 C82 -22 86 18 62 46 C38 74 -10 86 -44 64 C-78 42 -86 -6 -62 -40 C-38 -74 42 -70 62 -46 Z" />
+      <path id="sparkle-path" d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z" />
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <nav class="navbar__inner pop-in" aria-label="Main">
+      <!-- Logo: put your file at assets/logo.svg. A placeholder shows until it exists. -->
+      <a class="logo" href="index.html" aria-label="Go to homepage">
+        <img src="petco-logo.svg" alt="" onerror="this.closest('.logo').classList.add('logo--missing')" />
+        <span class="logo__placeholder">Your logo</span>
+      </a>
+
+      <a class="blob-btn nav-btn" data-variant="butter" href="notification.html" aria-label="Notifications &amp; Updates">
+        <span class="blob-btn__icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9a6 6 0 1 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9Z" />
+            <path d="M10 20a2 2 0 0 0 4 0" />
+          </svg>
+        </span>
+        <span class="label-long">Notifications &amp; Updates</span>
+        <span class="label-short">Updates</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true">
+        <svg class="blob blob--top" viewBox="-100 -100 200 200" fill="currentColor"><use href="#blob-path" /></svg>
+        <svg class="blob blob--bottom" viewBox="-100 -100 200 200" fill="currentColor"><use href="#blob-path" /></svg>
+      </div>
+
+      <div class="hero__inner">
+        <!-- Copy: headline and tagline are separate elements, easy to replace -->
+        <div class="hero__copy">
+          <h1 id="hero-heading" class="pop-in" style="--d:.1s">
+            A Little <span class="hl">Joy</span> Goes a Long Way!
+          </h1>
+          <p class="tagline pop-in" style="--d:.28s">Something lovely is waiting for you. Come on in!</p>
+          <svg class="sparkle sparkle--title" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="--d:.6s"><use href="#sparkle-path" /></svg>
+        </div>
+
+        <!-- Illustration stage: fixed shape, so nothing shifts as things load -->
+        <div class="stage pop-in" style="--d:.2s">
+          <svg class="stage__blob blob-drift" viewBox="-100 -100 200 200" fill="currentColor" aria-hidden="true"><use href="#blob-path" /></svg>
+          <span class="dot dot--1" aria-hidden="true" style="--d:.5s"></span>
+          <span class="dot dot--2" aria-hidden="true" style="--d:2s"></span>
+          <span class="dot dot--3" aria-hidden="true" style="--d:3.2s"></span>
+          <svg class="sparkle sparkle--1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="--d:0s"><use href="#sparkle-path" /></svg>
+          <svg class="sparkle sparkle--2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="--d:1.2s"><use href="#sparkle-path" /></svg>
+          <svg class="sparkle sparkle--3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="--d:2.2s"><use href="#sparkle-path" /></svg>
+
+          <div class="puppy">
+            <div class="puppy__shadow" aria-hidden="true"></div>
+
+            <div class="puppy-float">
+              <button class="puppy-hit" id="puppy" type="button" data-tongue="in"
+                      aria-label="Puppy illustration. Activate to make it stick out its tongue.">
+                <span class="puppy-boop" id="puppy-boop">
+                  <!--
+                    PUPPY SVG GOES HERE
+                    Paste your Golden Retriever <svg>...</svg> markup inside #puppy-slot.
+                    The placeholder hides itself automatically once an <svg> is present.
+                    Optional ids so the page can animate parts of your SVG:
+                      eyes   -> id="puppy-eye-left" and id="puppy-eye-right"  (blink)
+                      tongue -> id="puppy-tongue"                             (shows on click)
+                    Without them the puppy still floats, tilts on hover and squishes on click.
+                  -->
+                  <span class="puppy-slot" id="puppy-slot">
+                    <span class="puppy-placeholder">
+                      <span class="puppy-placeholder__box">
+                        <strong>Puppy SVG goes here</strong>
+                        <span>paste it inside #puppy-slot</span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </div>
+
+            <span class="blep" id="blep" aria-hidden="true" data-show="false">Blep!</span>
+            <span class="sr-only" role="status" id="puppy-status"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
