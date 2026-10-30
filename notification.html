@@ -12,13 +12,47 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Stub page: the navbar button on the homepage links here. Build it out as needed. -->
-  <main class="page-center">
-    <div class="card">
-      <h1>Notifications &amp; Updates</h1>
-      <p>You&rsquo;re all caught up!</p>
-      <a class="blob-btn" data-variant="lavender" href="index.html">Back to home</a>
-    </div>
-  </main>
-</body>
-</html>
+  <!-- Shared shapes + icons -->
+  
+
+  <main class="notif">
+    <div class="notif__bg" aria-hidden="true">
+       </div>
+
+    <div class="notif__inner">
+      <a class="blob-btn" data-variant="lavender" href="index.html">
+        <span class="blob-btn__icon" aria-hidden="true">
+          
+        </span>
+        Back to home
+      </a>
+
+      <header class="notif__head">
+        <h1>Notifications &amp; Updates</h1>
+        <p>All your pup&rsquo;s vet sessions in one place, so nothing gets missed.</p>
+      </header>
+
+      <!-- ============ UPCOMING ============ -->
+      <section class="group" aria-labelledby="upcoming-heading">
+        <div class="group__title"><h2 id="upcoming-heading">Upcoming sessions</h2><span class="count">3</span></div>
+        <ul class="session-list">
+
+          <li class="session pop-in" style="--d:.10s">
+            <time class="session__date" datetime="2026-11-04"><span class="session__month">Nov</span><span class="session__day">4</span></time>
+            <div class="session__body">
+              <div class="session__top"><h3 class="session__title">Annual health checkup</h3><span class="chip">Upcoming</span></div>
+              <ul class="session__meta">
+                <li> <span>Wed, 4 Nov 2026 · 10:30 AM</span></li>
+                <li>
+          
+                  <span>Dr. Meera Sharma · for Biscuit</span></li>
+                <li>
+                
+                  <span>Happy Paws Vet Clinic</span></li>
+              </ul>
+              <p class="session__notes">Bring the vaccination booklet. Skip breakfast if blood tests are needed.</p>
+            </div>
+          </li>
+
+          <li class="session pop-in" style="--d:.18s">
+            <time class="session__date" datetime="2026-11-18"><span
